@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Brand</title>
+    <link rel="stylesheet" href="/static/landingpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    <div class="logo" >
+        <img src="/assets/logo.jpeg" alt="ReWear Logo" style="width: 70px; height: 70px;">
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Items</a></li>
+            <li><a href="add-item.html">List an Item</a></li>
+
+            <!-- Show this if user IS logged in (use JS to toggle) -->
+            <li id="dashboard-link" style="display: none;"><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div class="nav-icons">
+        <a href="#" id="finder-icon"> <i class="fa-solid fa-magnifying-glass"></i> </a>
+        <li id="login-link"><a href="#">Dashboard</a></li>
+
+        <!-- can add more if wnant -->
+    </div>
+</header>
+
+    <div class="search-bar-container" id="search-bar-container">
+        <div class="search-bar" id="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." onkeyup="searchProducts()">
+            <button id="close-btn" onclick="closeSearch()">Close</button>
+        </div>
+        <div id="search-results"></div>
+    </div>
+    <div class="main-content" id="main-content">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/web-banners-6.jpg?v=1707291626&width=1500" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/may-p.png?v=1716621394&width=1500" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/WhatsApp_Image_2024-04-15_at_5.52.12_PM.jpg?v=1713184002&width=1500" alt="Image 3">
+        </div>
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/web-banners-cc.jpg?v=1708344316&width=1500" alt="Image 4">
+        </div>
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/ec-web-banners_3cd9816d-08df-4107-af7a-470e6a4978a6.jpg?v=1708344401&width=1500" alt="Image 5">
+        </div>
+        <div class="slide fade">
+            <img src="https://www.hayclothing.in/cdn/shop/files/web-banners-4_2.jpg?v=1708320825&width=1500" alt="Image 6">
+        </div>
+        <div class="loading-bars">
+            <div class="loading-bar" id="loading-bar-1"></div>
+            <div class="loading-bar" id="loading-bar-2"></div>
+            <div class="loading-bar" id="loading-bar-3"></div>
+            <div class="loading-bar" id="loading-bar-4"></div>
+            <div class="loading-bar" id="loading-bar-5"></div>
+            <div class="loading-bar" id="loading-bar-6"></div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <div class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="card-container">
+            <div class="card">
+  <div class="card-image" id="product1"></div>
+
+  <div class="card-details">
+    <h3 class="product-name">Blue Denim Jacket</h3>
+    <p class="uploader-name">Uploaded by: Alison Pinto</p>
+    <p class="description">Classic unisex denim jacket for casual wear. Lightly used.</p>
+    <p class="category"><strong>Category:</strong> Jacket</p>
+    <p class="condition"><strong>Condition:</strong> Gently Used</p>
+    <p class="tags"><strong>Tags:</strong> Winter, Casual</p>
+    <p class="points"><strong>Points:</strong> 60</p>
+    <p class="availability"><strong>Status:</strong> Available</p>
+  </div>
+</div>
+
+            <div class="card">
+                <div class="card-image" id="product2"></div>
+                <div class="card-details">
+                   <h3 class="product-name">Blue Denim Jacket</h3>
+    <p class="uploader-name">Uploaded by: Alison Pinto</p>
+    <p class="description">Classic unisex denim jacket for casual wear. Lightly used.</p>
+    <p class="category"><strong>Category:</strong> Jacket</p>
+    <p class="condition"><strong>Condition:</strong> Gently Used</p>
+    <p class="tags"><strong>Tags:</strong> Winter, Casual</p>
+    <p class="points"><strong>Points:</strong> 60</p>
+    <p class="availability"><strong>Status:</strong> Available</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" id="product3"></div>
+                <div class="card-details">
+                    <h3 class="product-name">Blue Denim Jacket</h3>
+    <p class="uploader-name">Uploaded by: Alison Pinto</p>
+    <p class="description">Classic unisex denim jacket for casual wear. Lightly used.</p>
+    <p class="category"><strong>Category:</strong> Jacket</p>
+    <p class="condition"><strong>Condition:</strong> Gently Used</p>
+    <p class="tags"><strong>Tags:</strong> Winter, Casual</p>
+    <p class="points"><strong>Points:</strong> 60</p>
+    <p class="availability"><strong>Status:</strong> Available</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" id="product4"></div>
+                <div class="card-details">
+                   <h3 class="product-name">Blue Denim Jacket</h3>
+    <p class="uploader-name">Uploaded by: Alison Pinto</p>
+    <p class="description">Classic unisex denim jacket for casual wear. Lightly used.</p>
+    <p class="category"><strong>Category:</strong> Jacket</p>
+    <p class="condition"><strong>Condition:</strong> Gently Used</p>
+    <p class="tags"><strong>Tags:</strong> Winter, Casual</p>
+    <p class="points"><strong>Points:</strong> 60</p>
+    <p class="availability"><strong>Status:</strong> Available</p>
+                </div>
+            </div>
+        </div>
+        <a href="NewArrivals.html" class="view-all-btn">View All</a>
+    </div>
+
+
+
+    <div class="banner">
+        <img src="https://www.hayclothing.in/cdn/shop/files/Home_screen_banner-02_2.jpg?v=1702358139&width=2000" alt="Banner" class="banner-image">
+        
+        <div class="white-ball" data-tooltip-id="model1-tooltip" style="top: 50%; left: 32%;"></div>
+        <div class="white-ball" data-tooltip-id="model2-tooltip" style="top: 50%; left: 70%;"></div>
+        
+        <div class="tooltip" id="model1-tooltip">
+            <span class="tooltip-text">Rhytm Of Shapes - Rs.999</span>
+        </div>
+        <div class="tooltip" id="model2-tooltip">
+            <span class="tooltip-text">Pastel coco - Rs.1999</span>
+        </div>
+    </div>        
+    <div class="bottomwear-lounge">
+        <h2>The Bottomwear Lounge</h2>
+        <div class="card-container">
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-01_1.jpg?v=1702707994&width=750" alt="Model 1" class="bottomwear-image">
+                <a href="AnkelLeggings.html" class="bottomwear-name">Ankle Leggings</a>
+            </div>
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-02_1.jpg?v=1702707993&width=750" alt="Model 2" class="bottomwear-image">
+                <a href="Churidar.html" class="bottomwear-name">Churidar Leggings</a>
+            </div>
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-07_1.jpg?v=1702707994&width=750" alt="Model 3" class="bottomwear-image">
+                <a href="Straight.html" class="bottomwear-name">Straight Pant</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-08_1.jpg?v=1702707993&width=750" alt="Model 4" class="bottomwear-image">
+                <a href="Harem.html" class="bottomwear-name">Harem</a>
+            </div>
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-04_1.jpg?v=1702707993&width=750" alt="Model 5" class="bottomwear-image">
+                <a href="#" class="bottomwear-name">Palazzo</a>
+            </div>
+            <div class="card bottomwear-card">
+                <img src="https://www.hayclothing.in/cdn/shop/files/Home_page_leggings-06_2.jpg?v=1702707993&width=750" alt="Model 6" class="bottomwear-image">
+                <a href="#" class="bottomwear-name">Kurti Pants</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="panel-1">
+            <a href="#">Back to Top</a>
+        </div>
+        <div class="panel-2">
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">SHIPPING INFO</p>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Shipping & Exchange</a></li>
+                <li><a href="#">Bulk queries</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Fabric/Print disclaimer</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">THE COMPANY</p>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Company</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">MY ACCOUNT</p>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Exchange Request</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 500px;">EXCLUSIVE BENEFITS</p>
+                <div class="put_email">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <p style="font-size: small; margin-left: 500px; line-height: 20px;">Apply for our free membership to receive exclusive deals, news, and events</p>
+            </ul>
+        </div>
+        <div class="panel-3">
+            <div class="pages">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Consumer Health Data Privacy Disclosure</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                <p>© 2024, All Rights Reserved By Alison & Praful</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/landingpage.js"></script>
+    <script src="Search.js"></script>
+</body>
+</html>
