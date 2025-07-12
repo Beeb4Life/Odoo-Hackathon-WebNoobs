@@ -1,4 +1,3 @@
-// userdashboard.js
 window.onload = function () {
   const listingGrid = document.getElementById('listingGrid');
   const products = JSON.parse(localStorage.getItem('products') || '[]');
@@ -13,7 +12,7 @@ window.onload = function () {
     box.className = 'listing-box';
 
     const img = document.createElement('img');
-    img.src = product.image;
+    img.src = product.img; // Corrected: previously wrong key `image`
     img.alt = 'Product Image';
     img.style.width = '100%';
     img.style.height = '100%';

@@ -302,7 +302,7 @@ nav {
 
 .card {
     flex: 1 1 calc((100vw - 10rem) / 4);
-    height: 700px;
+    height: 500px;
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;

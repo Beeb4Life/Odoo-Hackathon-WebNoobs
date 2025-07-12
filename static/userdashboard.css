@@ -94,7 +94,7 @@ body {
 
 
 .purchase-box {
-  height: 130px;
+  height: 200px;
   background-color: #f0f0f0;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -136,9 +136,10 @@ body {
 }
 
 .listing-box {
-  height: 120px;
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
+  
 }

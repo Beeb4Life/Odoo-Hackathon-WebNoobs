@@ -52,30 +52,5 @@
    
      
 </body>
-<scrpt>
-    <script>
-  const validEmail = atob("dXNlckBnbWFpbC5jb20="); 
-  const validPassword = atob("MTIzNDU2"); 
-
-  window.onload = function () {
-    if (localStorage.getItem("loggedIn") === "true") {
-      window.location.href = "landingpage.html";
-    }
-  };
-
-  function fakeLogin(e) {
-    e.preventDefault();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    if (email === validEmail && password === validPassword) {
-      localStorage.setItem("loggedIn", "true");
-      window.location.href = "landingpage.html";
-    } else {
-      alert("Invalid email or password!");
-    }
-    return false;
-  }
-</script>
 
 </html>

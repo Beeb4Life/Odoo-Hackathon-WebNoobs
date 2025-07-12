@@ -20,13 +20,11 @@
   } else {
     container.innerHTML = products.map(product => `
       <div class="product-card">
-        <img src="${product.img}" alt="Product" class="product-img" />
+        <img src="${product.img}" alt="Product" class="product-img" style="width: 100%; height: auto; object-fit: cover;" />
         <p class="product-desc">${product.desc}</p>
       </div>
     `).join('');
   }
 </script>
-
-  </script>
 </body>
 </html>
