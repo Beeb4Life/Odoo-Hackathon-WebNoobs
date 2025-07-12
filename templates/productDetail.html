@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product Detail Page</title>
-    <link rel="stylesheet" href="/static/productDetails.css">
+  <meta charset="UTF-8" />
+  <title>Product Detail Page</title>
+  <link rel="stylesheet" href="/Odoo-Hackathon-WebNoobs-1/static/productDetails.css" />
 </head>
 <body>
-    <div class="dashboard">
-        <div class="header">
-            <h2>Product Detail Page</h2>
-            <button class="screen-btn">Screen 7</button>
-        </div>
-
-        <div class="search-bar">
-            <input type="text" placeholder="Search..." />
-            <button class="search-btn">🔍</button>
-        </div>
-
-        <div class="product-section">
-            <div class="product-images">
-                <div class="image-box">Add Images</div>
-            </div>
-            <div class="product-description">
-                <textarea placeholder="Add Product Description"></textarea>
-                <button class="availability-btn">Available / Swap</button>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>Previous Listings:</h3>
-            <div class="listing-grid">
-                <div class="listing-box"></div>
-                <div class="listing-box"></div>
-                <div class="listing-box"></div>
-                <div class="listing-box"></div>
-            </div>
-        </div>
+  <div class="dashboard">
+    <div class="header">
+      <h2>Product Detail Page</h2>
     </div>
 
-    <script src="script.js"></script>
+    <div class="search-bar">
+      <input type="text" placeholder="Search products..." />
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <form id="product-form">
+  <div class="product-section">
+    <div class="product-images">
+      <input type="file" accept="image/*" id="product-image" required />
+      <div class="image-box" id="image-preview">Preview</div>
+    </div>
+    <div class="product-description">
+      <textarea id="product-description" placeholder="Add Product Description" required></textarea>
+      <button type="submit" class="availability-btn">Post Product</button>
+    </div>
+  </div>
+</form>
+
+
+    <div class="section">
+      <h3>Previous Listings</h3>
+      <div class="listing-grid">
+        <div class="listing-box"></div>
+        <div class="listing-box"></div>
+        <div class="listing-box"></div>
+        <div class="listing-box"></div>
+      </div>
+    </div>
+  </div>
+  <script src="/Odoo-Hackathon-WebNoobs-1/static/productDetails.js"></script>
 </body>
 </html>

@@ -1,25 +1,25 @@
-// Simulate empty listings
-const listings = []; // Add item here to simulate existing ones
+// userdashboard.js
+window.onload = function () {
+  const listingGrid = document.getElementById('listingGrid');
+  const products = JSON.parse(localStorage.getItem('products') || '[]');
 
-const listingGrid = document.getElementById("listingGrid");
+  if (products.length === 0) {
+    listingGrid.innerHTML = "<p>No listings found.</p>";
+    return;
+  }
 
-function renderListings() {
-    if (listings.length === 0) {
-        const addBtn = document.createElement("div");
-        addBtn.className = "add-listing-btn";
-        addBtn.innerText = "+ Add Listing";
-        addBtn.onclick = () => {
-            alert("Redirect to add listing page or form.");
-        };
-        listingGrid.appendChild(addBtn);
-    } else {
-        listings.forEach(item => {
-            const box = document.createElement("div");
-            box.className = "listing-box";
-            box.innerText = item;
-            listingGrid.appendChild(box);
-        });
-    }
-}
+  products.forEach((product) => {
+    const box = document.createElement('div');
+    box.className = 'listing-box';
 
-renderListings();
+    const img = document.createElement('img');
+    img.src = product.image;
+    img.alt = 'Product Image';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+
+    box.appendChild(img);
+    listingGrid.appendChild(box);
+  });
+};

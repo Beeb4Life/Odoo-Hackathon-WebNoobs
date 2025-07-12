@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>User Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="/Odoo-Hackathon-WebNoobs-1/static/userdashboard.css" />
 </head>
 <body>
-    <div class="dashboard">
-        <div class="header">
-            <h2>User Dashboard</h2>
-            <button class="screen-btn">Screen 6</button>
-        </div>
+  <div class="dashboard">
+    <div class="header">
+      <h2>User Dashboard</h2>
 
-        <div class="user-info">
-            <div class="profile-pic"></div>
-            <div class="user-details">
-                <div class="detail-row"></div>
-                <div class="detail-row"></div>
-                <div class="detail-row"></div>
-                <div class="detail-row"></div>
-            </div>
-            <div class="bio-box"></div>
-        </div>
-
-        <div class="section">
-            <h3>My Listings</h3>
-            <div class="listing-grid" id="listingGrid">
-                <!-- Listings will appear here -->
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>My Purchases</h3>
-            <div class="purchase-grid">
-                <div class="purchase-box"></div>
-                <div class="purchase-box"></div>
-                <div class="purchase-box"></div>
-                <div class="purchase-box"></div>
-            </div>
-        </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="user-info">
+      <div class="profile-container">
+        <label for="profileUpload">
+          <img src="/Odoo-Hackathon-WebNoobs-1/static/default-avatar.png" alt="Profile" class="profile-pic" id="profileImage">
+        </label>
+        <input type="file" id="profileUpload" accept="image/*" hidden />
+      </div>
+
+      <div class="user-details">
+        <div class="detail-row">Name: Alison Pinto</div>
+        <div class="detail-row">Username: @alison_07</div>
+        <div class="detail-row">Email: alison@example.com</div>
+        <div class="detail-row">Location: Thane, India</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>My Listings</h3>
+      <div class="listing-grid" id="listingGrid"></div>
+    </div>
+
+    <div class="section">
+      <h3>My Purchases</h3>
+      <div class="purchase-grid">
+        <div class="purchase-box"></div>
+        <div class="purchase-box"></div>
+        <div class="purchase-box"></div>
+        <div class="purchase-box"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/Odoo-Hackathon-WebNoobs-1/static/userdashboard.js"></script>
+  <script>window.onload = function () {
+
+  const listingGrid = document.getElementById('listingGrid');
+
+  const listingImages = [
+    '/assets/listing1.jpg',
+    '/assets/listing2.jpg',
+    '/assets/listing3.jpg',
+    '/assets/listing4.jpg'
+  ];
+
+  listingImages.forEach(src => {
+    const box = document.createElement('div');
+    box.className = 'listing-box';
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Listing';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+
+    box.appendChild(img);
+    listingGrid.appendChild(box);
+  });
+
+  // ======== MY PURCHASES (STATIC IMAGES) ========
+  const purchaseBoxes = document.querySelectorAll('.purchase-box');
+  const purchaseImages = [
+    'https://i.pinimg.com/1200x/33/2a/35/332a35cbf8e0182c810629bcda5c1c07.jpg',
+    'https://i.pinimg.com/1200x/cd/41/93/cd4193e7661f6fb0112e16f791aa7a49.jpg',
+    '/assets/purchase3.jpg',
+    '/assets/purchase4.jpg'
+  ];
+
+  purchaseBoxes.forEach((box, index) => {
+    if (purchaseImages[index]) {
+      const img = document.createElement('img');
+      img.src = purchaseImages[index];
+      img.alt = 'Purchase';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'cover';
+      box.appendChild(img);
+    }
+  });
+};
+</script>
 </body>
 </html>

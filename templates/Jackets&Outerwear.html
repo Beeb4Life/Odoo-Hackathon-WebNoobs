@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals</title>
+    <link rel="stylesheet" href="/Odoo-Hackathon-WebNoobs-1/static/Jackets&Outerwear.css">
+</head>
+<body>
+    <header>
+    <div class="logo" >
+        <img src="/Odoo-Hackathon-WebNoobs-1/assets/logo.jpeg" alt="ReWear Logo" style="width: 70px; height: 70px;">
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/Odoo-Hackathon-WebNoobs-1/templates/browse.html">Browse Items</a></li>
+            <li><a href="/Odoo-Hackathon-WebNoobs-1/templates/productDetail.html">List an Item</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="nav-icons">
+  <ul>
+    <li>
+        <a href="userdashboard.html" id="login-link">Dashboard</a>
+    </li>
+  </ul>
+</div>
+
+</header>
+    <div class="search-bar-container" id="search-bar-container">
+        <div class="search-bar" id="search-bar">
+            <input type="text" id="search-input" placeholder="Search..." onkeyup="searchProducts()">
+            <button id="close-btn" onclick="closeSearch()">Close</button>
+        </div>
+        <div id="search-results"></div>
+    </div>
+    <section class="banner">
+        <img src="Aug_Inside_Banner-04.webp" alt="New Arrivals Banner">
+    </section>
+    
+    <section class="new-arrivals">
+        <h1 style="align-items: center;">Jackets and Outwear </h1>
+        <div class="products"></div>
+        <div class="loading-indicator">
+            <img src="MnyxU.gif" alt="Loading...">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="panel-1">
+            <a href="#">Back to Top</a>
+        </div>
+        <div class="panel-2">
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">SHIPPING INFO</p>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Shipping & Exchange</a></li>
+                <li><a href="#">Bulk queries</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Fabric/Print disclaimer</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">THE COMPANY</p>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Company</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Franchise Enquiry</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 60px;">MY ACCOUNT</p>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Exchange Request</a></li>
+            </ul>
+            <ul>
+                <p style="font-weight: 600; font-size: small; margin-left: 500px;">EXCLUSIVE BENEFITS</p>
+                <div class="put_email">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <p style="font-size: small; margin-left: 500px; line-height: 20px;">Apply for our free membership to receive exclusive deals, news, and events</p>
+            </ul>
+        </div>
+        <div class="panel-3">
+            <div class="pages">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Consumer Health Data Privacy Disclosure</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                <p>© 2024, All Rights Reserved By Alison & Praful</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/Odoo-Hackathon-WebNoobs-1/static/Jackets&Outerwear.js"></script>
+    <script src="Search.js"></script>
+</body>
+</html>

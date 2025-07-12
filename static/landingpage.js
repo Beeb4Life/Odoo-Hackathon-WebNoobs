@@ -45,37 +45,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     const cards = document.querySelectorAll('.card-image');
     const defaultImages = {
-        product1: 'https://www.hayclothing.in/cdn/shop/files/DSC09678.webp?v=1717668770&width=360',
-        product2: 'https://www.hayclothing.in/cdn/shop/files/DSC04119.webp?v=1717155402&width=940',
-        product3: 'https://www.hayclothing.in/cdn/shop/files/DSC08136.webp?v=1717153866&width=360',
-        product4: 'https://www.hayclothing.in/cdn/shop/files/DSC08925.webp?v=1717153147&width=1100'
+        product1: 'https://stuf-f.com/cdn/shop/files/fortela-king-so032-oxford-shirt-white-1_1296x.jpg?v=1752150069',
+        product2: 'https://stuf-f.com/cdn/shop/files/ues-w902-j-type-2-chambray-jacke-1_1296x.jpg?v=1751021140',
+        product3: 'https://stuf-f.com/cdn/shop/files/stevenson-overall-co.-encinitas-150-osx-jean-indigo-one-wash-1_1296x.jpg?v=1752153982',
+        product4: 'https://stuf-f.com/cdn/shop/files/fortela-tubejp-frt03-made-in-japan-pocket-tee-acquamarine-1_1296x.jpg?v=1752074852',
     };
-    const hoverImages = {
-        product1: 'https://www.hayclothing.in/cdn/shop/files/DSC09691.webp?v=1717668770&width=360',
-        product2: 'https://www.hayclothing.in/cdn/shop/files/DSC04149.webp?v=1717155402&width=360',
-        product3: 'https://www.hayclothing.in/cdn/shop/files/DSC08081.webp?v=1717153866&width=360',
-        product4: 'https://www.hayclothing.in/cdn/shop/files/DSC08942.webp?v=1717153147&width=360'
-    };
+    
     cards.forEach(card => {
-        const productId = card.id;
-        const defaultImg = defaultImages[productId];
-        const hoverImg = hoverImages[productId];
+    const productId = card.id;
+    const defaultImg = defaultImages[productId];
 
-        card.innerHTML = `
-            <img src="${defaultImg}" alt="Product Image" class="default-image">
-            <img src="${hoverImg}" alt="Hover Image" class="hover-image">
-        `;
-
-        card.addEventListener('mouseenter', function() {
-            card.querySelector('.default-image').style.opacity = '0';
-            card.querySelector('.hover-image').style.opacity = '1';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            card.querySelector('.default-image').style.opacity = '1';
-            card.querySelector('.hover-image').style.opacity = '0';
-        });
-    });
+    card.innerHTML = `
+        <img src="${defaultImg}" alt="Product Image" style="width: 100%; height: auto;">
+    `;
+});
 
     document.querySelectorAll('.white-ball').forEach(ball => {
         ball.addEventListener('mouseover', function() {
